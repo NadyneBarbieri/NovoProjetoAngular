@@ -1,17 +1,9 @@
-export class UsuarioLogar {
-
-    public id: number;
-
-    public nome: string;
-
-    public usuario: string;
-
-    public senha: string;
-
-    public token: string;
-    
-    public foto: string; 
-
-    public tipo: string;
-
+export interface UsuarioLogar {
+  id: number;
+  nome: string;
+  usuario: string;
+  senha: string;
+  token: string;
+  foto: string;
+  tipo: string;
 }

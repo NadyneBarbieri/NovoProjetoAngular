@@ -5,47 +5,47 @@ import { Tema } from '../model/Tema';
 import { environment } from '../../environments/enviromenmts.prod';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class TemaService {
-    apagarTema(idTema: number) {
-        throw new Error('Method not implemented.');
-    }
+  apagarTema(idTema: number) {
+    throw new Error('Method not implemented.');
+  }
 
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-    token = {
-        headers: new HttpHeaders().set('Authorization', environment.token),
-    };
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token),
+  };
 
-    getAllTema(): Observable<Tema[]> {
-        return this.http.get<Tema[]>('http://localhost:8080/temas', this.token);
-    }
+  getAllTema(): Observable<Tema[]> {
+    return this.http.get<Tema[]>('http://localhost:8080/temas', this.token);
+  }
 
-    getByIdTema(id: number): Observable<Tema> {
-        return this.http.get<Tema>(`http://localhost:8080/temas/${id}`, this.token);
-    }
+  getByIdTema(id: number): Observable<Tema> {
+    return this.http.get<Tema>(`http://localhost:8080/temas/${id}`, this.token);
+  }
 
-    getByDescricaoTema(descricao: string): Observable<Tema[]> {
-        return this.http.get<Tema[]>(
-            `http://localhost:8080/descricao/${descricao}`,
-            this.token
-        );
-    }
+  getByDescricaoTema(descricao: string): Observable<Tema[]> {
+    return this.http.get<Tema[]>(
+      `http://localhost:8080/descricao/${descricao}`,
+      this.token
+    );
+  }
 
-    postTema(tema: Tema): Observable<Tema> {
-        return this.http.post<Tema>(
-            'http://localhost:8080/temas',
-            tema,
-            this.token
-        );
-    }
+  postTema(tema: Tema): Observable<Tema> {
+    return this.http.post<Tema>(
+      'http://localhost:8080/temas',
+      tema,
+      this.token
+    );
+  }
 
-    putTema(tema: Tema): Observable<Tema> {
-        return this.http.put<Tema>('http://localhost:8080/temas', tema, this.token);
-    }
+  putTema(tema: Tema): Observable<Tema> {
+    return this.http.put<Tema>('http://localhost:8080/temas', tema, this.token);
+  }
 
-    deleteTema(id: number) {
-        return this.http.delete(`http://localhost:8080/temas/${id}`, this.token);
-    }
+  deleteTema(id: number) {
+    return this.http.delete(`http://localhost:8080/temas/${id}`, this.token);
+  }
 }

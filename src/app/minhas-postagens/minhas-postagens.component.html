@@ -37,8 +37,8 @@
   
         <div class="col-md-6 d-flex justify-content-between margem-top">
   
-          <div class="container-fluid">
-  
+          <div *ngIf="Usuario" class="container-fluid">
+
             <!---publicar postagem--->
   
             <div class="feed" *ngFor="let item of Usuario.postagem">

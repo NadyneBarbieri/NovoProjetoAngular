@@ -1,21 +1,11 @@
-import { Postagem } from "./Postagem";
+import { Postagem } from './Postagem';
 
-export class Usuario{
-
-    public id: number;
-
-    public nome: string;
-
-    public usuario: string;
-
-    public senha: string;
-
-    public foto: string; 
-
-    public tipo: string;
-
-    public postagem: Postagem[]
-   
-   ///cl postagem: vai entrar depois que a gente criar a model postagem
-
+export interface Usuario {
+  id: number;
+  nome: string;
+  usuario: string;
+  senha: string;
+  foto: string;
+  tipo: string;
+  postagem: Postagem[];
 }

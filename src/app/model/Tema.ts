@@ -1,12 +1,8 @@
-import { Postagem } from "./Postagem"
+import { Postagem } from './Postagem';
 
-export class Tema{
-
-    public id: number
-
-    public descricao: string
-
-    public postagem: Postagem[]
-
-    public nome: string
+export interface Tema {
+  id: number;
+  nome: string;
+  descricao: string;
+  postagem: Postagem[];
 }

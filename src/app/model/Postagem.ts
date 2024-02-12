@@ -1,23 +1,27 @@
-import { Tema } from "./Tema"
-import { Usuario } from "./Usuario"
+import { Tema } from './Tema';
+import { Usuario } from './Usuario';
 
-export class Postagem {
+export interface Postagem {
+  id: number;
+  titulo: string;
+  texto: string;
+  data: Date;
+  usuario: Usuario;
+  tema: Tema;
 
-    public id: number
-    public titulo: string
-    public texto: string
-    public data: Date
-    public tema: Tema
-    public usuario: Usuario
-
-    constructor(
-       
-     id: number
-     titulo: string
-     texto: string
-     data: Date
-     tema: Tema
-    usuario: Usuario
-      ) { }
-
+  // constructor(
+  //     id: number,
+  //     titulo: string ,
+  //     texto: string,
+  //     data: Date,
+  //     usuario: Usuario,
+  //     tema: Tema
+  // ){
+  //     this.id = id
+  //     this.titulo = titulo
+  //     this.data = data
+  //     this.tema = tema
+  //     this.texto = texto
+  //     this.usuario = usuario
+  // }
 }

@@ -6,22 +6,17 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   standalone: true,
   imports: [],
   templateUrl: './alertas.component.html',
-  styleUrl: './alertas.component.css'
+  styleUrl: './alertas.component.css',
 })
 export class AlertasComponent implements OnInit {
+  @Input() message: string = '';
+  @Input() type: string = 'success';
 
-  @Input() message: string
-  @Input() type: string = 'success'
+  constructor(public modal: BsModalRef) {}
 
-  constructor(
-    public modal: BsModalRef
-  ) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onClose() {
+    this.modal.hide();
   }
-
-  onClose(){
-    this.modal.hide()
-  }
-
 }

@@ -5,20 +5,12 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './sobre-mim.component.html',
-  styleUrl: './sobre-mim.component.css'
+  styleUrl: './sobre-mim.component.css',
 })
 export class SobreMimComponent implements OnInit {
-  
-  constructor(
-
-    private router: Router
-
-  ) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
-
-    window.scroll(0,0)
-
+    window.scroll(0, 0);
   }
-
 }
